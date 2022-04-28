@@ -1,6 +1,6 @@
-package lab02.prob1;
+package lab03._03_many_to_one_uni_without_null;
 
-import lombok.*;
+import lombok.Data;
 
 import javax.persistence.*;
 import java.time.LocalDate;
@@ -24,6 +24,9 @@ public class Book {
     @Column
     private LocalDate publishDate;
 
+    @ManyToOne(cascade = {CascadeType.PERSIST})
+    @JoinColumn(name="publisher_id")
+    private Publisher publisher;
     private void setId (long id){
         this.id = id;
     }

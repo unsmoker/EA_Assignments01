@@ -25,7 +25,7 @@ public class HibernateUtils {
                 settings.put(Environment.DIALECT, "org.hibernate.dialect.MySQL8Dialect");
                 settings.put(Environment.SHOW_SQL, "true");
                 settings.put(Environment.AUTOCOMMIT, "true");
-                settings.put(Environment.HBM2DDL_AUTO, "update");
+                settings.put(Environment.HBM2DDL_AUTO, "create");
                 configuration.setProperties(settings);
                 entityClasses.forEach(configuration::addAnnotatedClass);
                 ServiceRegistry serviceRegistry = new StandardServiceRegistryBuilder()

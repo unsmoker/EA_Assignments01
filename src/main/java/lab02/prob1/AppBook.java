@@ -9,6 +9,7 @@ import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
 import java.sql.Date;
 import java.time.Instant;
+import java.time.LocalDate;
 import java.util.*;
 
 public class AppBook {
@@ -109,7 +110,7 @@ public class AppBook {
             theBook.setAuthor("The Author of book #" +i +" Jim Josuah");
             theBook.setPrice(22.5*i);
             theBook.setISBN("CCND00234-234"+i);
-            theBook.setPublish_date(Date.from(Instant.now()));
+            theBook.setPublishDate(LocalDate.now());
             books.add(theBook);
         }
         return books;
