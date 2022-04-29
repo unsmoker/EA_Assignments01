@@ -1,7 +1,6 @@
 package lab05;
 
 import hutils.HibernateUtils;
-import net.bytebuddy.asm.Advice;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -27,9 +26,8 @@ public class App {
     }
 
     public static void main(String[] args) {
-        sessionFactory.openSession();
-//        saveDatas();
-        sessionFactory.close();
+//        sessionFactory.openSession();
+//        sessionFactory.close();
     }
 
     public static void performTask (Consumer<Session> sessionConsumer){
