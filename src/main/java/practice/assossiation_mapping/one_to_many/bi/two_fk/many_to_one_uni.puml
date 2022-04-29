@@ -1,0 +1,19 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Car {
+    +year
+    +model
+    +maker
+    +owner
+}
+
+class Person {
+    +firstName
+    +lasatName
+    +cars
+}
+
+Person "1"--> "0..*" Car : owns
+
+@enduml

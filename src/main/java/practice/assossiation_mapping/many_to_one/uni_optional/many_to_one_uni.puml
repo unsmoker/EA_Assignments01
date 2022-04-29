@@ -1,0 +1,17 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Car {
+    +year
+    +model
+    +maker
+    +owner
+}
+
+class Customer {
+    +firstName
+    +lasatName
+}
+
+Car "0..*"--> "1" Customer: owned by
+@enduml
